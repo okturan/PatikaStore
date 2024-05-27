@@ -22,8 +22,8 @@ public class Store {
 
 		notebooks = new ArrayList<>();
 		notebooks.add(new Notebook(1, 999.99, 10.0, 50, "MacBook Pro", brands[2], 512, 16, 16));
-		notebooks.add(new Notebook(2, 799.99, 15.0, 30, "Dell XPS 13", brands[6],256, 13, 8));
-		notebooks.add(new Notebook(3, 649.99, 5.0, 40, "HP Spectre x360", brands[6],512, 14, 8));
+		notebooks.add(new Notebook(2, 799.99, 15.0, 30, "Dell XPS 13", brands[6], 256, 13, 8));
+		notebooks.add(new Notebook(3, 649.99, 5.0, 40, "HP Spectre x360", brands[6], 512, 14, 8));
 
 		phones = new ArrayList<>();
 		phones.add(new Phone(1, 999.99, 20.0, 100, "iPhone 13 Pro", brands[2], 256, 6, 6, 3095, "Graphite"));
@@ -119,7 +119,10 @@ public class Store {
 		input.nextLine(); // consume newline
 		System.out.print("Enter Notebook name: ");
 		String name = input.nextLine();
-		System.out.print("Enter brand ID: ");
+		System.out.println("Enter brand ID: ");
+		for (Brand brand : brands) {
+			System.out.println(brand.getId() + " - " + brand.getName());
+		}
 		int brandId = input.nextInt();
 		System.out.print("Enter storage: ");
 		int storage = input.nextInt();
@@ -128,7 +131,7 @@ public class Store {
 		System.out.print("Enter RAM: ");
 		int ram = input.nextInt();
 
-		Product newProduct = new Notebook(id, price, discountRate, stockAmount, name, brands[brandId], storage, screenSize, ram);
+		Product newProduct = new Notebook(id, price, discountRate, stockAmount, name, brands[brandId - 1], storage, screenSize, ram);
 		notebooks.add(newProduct);
 		System.out.println(newProduct + " added successfully.");
 	}
@@ -144,7 +147,10 @@ public class Store {
 		int stockAmount = input.nextInt();
 		System.out.print("Enter Phone name: ");
 		String name = input.nextLine();
-		System.out.print("Enter brand ID: ");
+		System.out.println("Enter brand ID: ");
+		for (Brand brand : brands) {
+			System.out.println(brand.getId() + " - " + brand.getName());
+		}
 		int brandId = input.nextInt();
 		System.out.print("Enter storage: ");
 		int storage = input.nextInt();
@@ -152,12 +158,12 @@ public class Store {
 		int screenSize = input.nextInt();
 		System.out.print("Enter RAM: ");
 		int ram = input.nextInt();
-		System.out.println("Enter battery capacity in Mah");
+		System.out.println("Enter battery capacity in Mah: ");
 		int batteryCapacity = input.nextInt();
-		System.out.println("Enter phone color");
+		System.out.print("Enter phone color");
 		String color = input.nextLine();
 
-		Product newProduct = new Phone(id, price, discountRate, stockAmount, name, brands[brandId], storage, screenSize, ram, batteryCapacity, color);
+		Product newProduct = new Phone(id, price, discountRate, stockAmount, name, brands[brandId - 1], storage, screenSize, ram, batteryCapacity, color);
 		phones.add(newProduct);
 		System.out.println(newProduct + " added successfully.");
 	}
