@@ -21,14 +21,14 @@ public class Store {
 		}
 
 		notebooks = new ArrayList<>();
-		notebooks.add(new Notebook(1, 999.99, 10.0, 50, "MacBook Pro", brands[2], 512, 16, 16));
-		notebooks.add(new Notebook(2, 799.99, 15.0, 30, "Dell XPS 13", brands[6], 256, 13, 8));
-		notebooks.add(new Notebook(3, 649.99, 5.0, 40, "HP Spectre x360", brands[6], 512, 14, 8));
+		notebooks.add(new Notebook(1, 999.99, 10.0, 50, "MacBook Pro", brands[0], 512, 16, 16));
+		notebooks.add(new Notebook(2, 799.99, 15.0, 30, "Dell XPS 13", brands[5], 256, 13, 8));
+		notebooks.add(new Notebook(3, 649.99, 5.0, 40, "HP Spectre x360", brands[3], 512, 14, 8));
 
 		phones = new ArrayList<>();
-		phones.add(new Phone(1, 999.99, 20.0, 100, "iPhone 13 Pro", brands[2], 256, 6, 6, 3095, "Graphite"));
-		phones.add(new Phone(2, 799.99, 25.0, 80, "Samsung Galaxy S21", brands[0], 128, 6, 8, 4000, "Phantom Gray"));
-		phones.add(new Phone(3, 699.99, 10.0, 60, "Google Pixel 6", brands[7], 128, 6, 8, 4614, "Stormy Black"));
+		phones.add(new Phone(1, 999.99, 20.0, 100, "iPhone 13 Pro", brands[0], 256, 6, 6, 3095, "Graphite"));
+		phones.add(new Phone(2, 799.99, 25.0, 80, "Samsung Galaxy S21", brands[7], 128, 6, 8, 4000, "Phantom Gray"));
+		phones.add(new Phone(3, 699.99, 10.0, 60, "Xiaomi note 9", brands[8], 128, 6, 8, 4614, "Stormy Black"));
 
 		printNotebooks();
 		printPhones();
