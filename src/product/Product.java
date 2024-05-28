@@ -64,7 +64,7 @@ public abstract class Product {
 
 	@Override
 	public String toString() {
-		return String.format("| %2d | %-20s | %-8.1f USD | %-8s | %-2d GB | %-2d inches | %-2d GB |",
-				id, name, price, brand.getName(), storage, screenSize, ram);
+		return String.format("| %2d | %-8s | %-18s | %-6.1f USD | %-6.1f %% | %-5d | %-4d GB | %-4d inches | %-2d GB |",
+				id, brand.getName(), name, price, discountRate, stockAmount, storage, screenSize, ram);
 	}
 }

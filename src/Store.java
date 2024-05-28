@@ -57,7 +57,6 @@ public class Store {
 					return;
 				default:
 					System.out.println("Wrong choice. Enter again!");
-					break;
 			}
 		}
 	}
