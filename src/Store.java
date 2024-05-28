@@ -25,11 +25,8 @@ public class Store {
 
 		notebooks = new ArrayList<>();
 		notebooks.add(new Notebook(++notebookCounter, 999.99, 10.0, 50, "MacBook Pro", brands[0], 512, 16, 16));
-		System.out.println(notebookCounter);
 		notebooks.add(new Notebook(++notebookCounter, 799.99, 15.0, 30, "Dell XPS 13", brands[5], 256, 13, 8));
-		System.out.println(notebookCounter);
 		notebooks.add(new Notebook(++notebookCounter, 649.99, 5.0, 40, "HP Spectre x360", brands[3], 512, 14, 8));
-		System.out.println(notebookCounter);
 
 		phones = new ArrayList<>();
 		phones.add(new Phone(++phoneCounter, 999.99, 20.0, 100, "iPhone 13 Pro", brands[0], 256, 6, 6, 3095, "Graphite"));
@@ -37,7 +34,6 @@ public class Store {
 		phones.add(new Phone(++phoneCounter, 699.99, 10.0, 60, "Xiaomi Note 9", brands[8], 128, 6, 8, 4614, "Stormy Black"));
 
 		printNotebooks();
-		System.out.println(notebookCounter);
 		printPhones();
 	}
 
